@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int top=-1;
+int main()
+{
+    int q;
+    cin>>q;
+    int arr[q];
+    for(int i=0; i<q; i++)
+    {
+        int type;
+        cin>>type;
+        if(type==1)
+        {
+            if(top==-1)
+            cout<<"No Food"<<"\n";
+            else
+            {
+                cout<<arr[top]<<"\n";
+                top=top-1;
+            }
+        }
+        if(type==2)
+        {
+            int t2;
+            cin>>t2;
+            top=top+1;
+            arr[top]=t2;
+        }
+    }
+}
